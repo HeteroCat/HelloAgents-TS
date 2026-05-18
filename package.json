@@ -1,15 +1,30 @@
 {
-  "name": "hello-agents",
+  "name": "hello-agents-ts",
   "version": "1.0.0",
   "description": "Production-grade multi-agent framework - TypeScript version",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
     "clean": "rm -rf dist",
     "test": "npm run build && node tests/smoke.cjs",
-    "typecheck:examples": "npx tsc --noEmit --target ES2022 --module commonjs --lib ES2022 --esModuleInterop --skipLibCheck examples/*.ts",
+    "test:package": "npm run build && node tests/package-consume.cjs",
+    "typecheck:examples": "tsc -p tsconfig.examples.json",
+    "prepack": "npm run build && npm test && npm run typecheck:examples",
+    "pack:dry-run": "npm pack --dry-run --cache ./.npm-cache",
     "example:quickstart": "ts-node examples/01-quickstart.ts",
     "example:tools": "ts-node examples/02-custom-tools.ts",
     "example:react": "ts-node examples/03-react-agent.ts",

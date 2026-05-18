@@ -102,7 +102,7 @@ function testExamplesExist() {
 }
 
 function main() {
-  assert.equal(pkg.name, 'hello-agents');
+  assert.equal(pkg.name, 'hello-agents-ts');
   testExports();
   testToolBaseCompatibility();
   testContextComponents();

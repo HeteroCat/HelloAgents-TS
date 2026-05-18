@@ -15,7 +15,7 @@ import {
   TokenCounter,
   HistoryManager,
   ObservationTruncator,
-} from '../src';
+} from 'hello-agents-ts';
 
 function main() {
   // --- 1. Token 计数 ---

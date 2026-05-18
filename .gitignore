@@ -5,3 +5,5 @@ dist/
 .env.*
 tool-output/
 tests/.tmp-sessions/
+.npm-cache/
+*.tgz

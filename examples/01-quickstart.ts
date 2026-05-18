@@ -15,7 +15,7 @@
  *   LLM_MODEL_ID=gpt-4o                     (可选)
  */
 
-import { SimpleAgent, HelloAgentsLLM } from '../src';
+import { SimpleAgent, HelloAgentsLLM } from 'hello-agents-ts';
 
 async function main() {
   // 1. 初始化 LLM（自动从环境变量读取配置）

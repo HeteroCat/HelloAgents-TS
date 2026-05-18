@@ -17,7 +17,7 @@ import {
   ToolParameter,
   ToolResponse,
   ToolRegistry,
-} from '../src';
+} from 'hello-agents-ts';
 
 // --- 模拟搜索工具 ---
 class SearchTool extends Tool {

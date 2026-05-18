@@ -18,7 +18,7 @@ import {
   PlanSolveAgent,
   HelloAgentsLLM,
   createAgent,
-} from '../src';
+} from 'hello-agents-ts';
 
 async function main() {
   const llm = new HelloAgentsLLM();

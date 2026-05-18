@@ -17,7 +17,7 @@ import {
   ToolParameter,
   ToolResponse,
   ToolRegistry,
-} from '../src';
+} from 'hello-agents-ts';
 
 // --- 自定义工具：天气查询（模拟） ---
 class WeatherTool extends Tool {
