@@ -1,6 +1,6 @@
 {
   "name": "hello-agents-ts",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Production-grade multi-agent framework - TypeScript version",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -14,6 +14,7 @@
   "files": [
     "dist",
     "README.md",
+    "README.en.md",
     "LICENSE"
   ],
   "scripts": {
